@@ -1,17 +1,18 @@
 import React from 'react'
-import styles from "../../scss/logo.module.scss"
+import { Link } from "react-router-dom"
 import logo from "../../assets/logo.png"
+import styles from "./style.module.scss"
 
 function Logo() {
   return (
-    <div className={styles["logo"]}>
+    <Link to="/" className={styles["logo"]}>
       <img src={logo} alt="logo" />
 
       <div className={styles["logo--text"]}>
         <span>L&nbsp;STANDS</span>
         <span>FOR&nbsp;LIBROS</span>
       </div>
-    </div>
+    </Link>
   )
 }
 

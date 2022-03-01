@@ -1,5 +1,6 @@
-import Topbar from "./components/Topbar";
 import WebFont from "webfontloader"
+import Topbar from "./components/Topbar"
+import Sidebar from './components/Sidebar'
 
 WebFont.load({
   google: {
@@ -9,7 +10,10 @@ WebFont.load({
 
 function App() {
   return (
-    <Topbar />
+    <>
+      <Topbar />
+      <Sidebar />
+    </>
   )
 }
 

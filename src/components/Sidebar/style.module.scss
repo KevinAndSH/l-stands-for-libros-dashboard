@@ -1,0 +1,44 @@
+.sidebar {
+  color: var(--white);
+  background-color: var(--main-color2);
+
+  width: 12em;
+  height: 100%;
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    gap: 2em;
+  }
+}
+
+.side-link {
+  color: var(--main-color1);
+  background-color: var(--main-color3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 0 1em;
+  height: 4em;
+
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.side-link:hover {
+  animation-name: scale-up;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
