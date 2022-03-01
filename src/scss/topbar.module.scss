@@ -1,0 +1,11 @@
+.topbar {
+  color: var(--white);
+  background-color: var(--main-color1);
+
+  height: 4em;
+  padding: 0.5em;
+  padding-right: 1.5em;
+
+  display: flex;
+  justify-content: space-between;
+}

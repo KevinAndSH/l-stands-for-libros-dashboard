@@ -1,0 +1,23 @@
+@use "./normalize";
+
+:root {
+  --hue: 220;
+  --main-color1: hsl(var(--hue), 80%, 30%);
+  --main-color2: hsl(var(--hue), 80%, 60%);
+  --main-color3: hsl(var(--hue), 80%, 80%);
+  --main-color4: hsl(var(--hue), 0%, 90%);
+
+  --white: hsl(0, 0%, 90%);
+  --black: hsl(0, 0%, 10%);
+}
+
+.dark-mode {
+  --main-color1: hsl(var(--hue), 80%, 30%);
+  --main-color2: hsl(var(--hue), 80%, 60%);
+  --main-color3: hsl(var(--hue), 50%, 50%);
+  --main-color4: hsl(var(--hue), 0%, 10%);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
