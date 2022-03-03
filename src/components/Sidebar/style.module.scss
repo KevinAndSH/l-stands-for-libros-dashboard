@@ -2,7 +2,7 @@
   color: var(--white);
   background-color: var(--main-color2);
 
-  width: 12em;
+  width: 15em;
   height: 100%;
   
   ul {
@@ -22,23 +22,19 @@
   align-items: center;
   text-align: center;
 
-  padding: 0 1em;
   height: 4em;
+  padding: 0 1em;
+  border: 1px solid var(--main-color1);
+  border-radius: 1em;
 
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
+  transition: 0.2s;
+}
+
+.side-link::after {
+  content: attr(data-text);
 }
 
 .side-link:hover {
-  animation-name: scale-up;
+  transform: scale(1.1);
 }
 
-@keyframes scale-up {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.1);
-  }
-}

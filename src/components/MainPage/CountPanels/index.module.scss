@@ -1,0 +1,24 @@
+.panel-wrapper {
+  display: flex;
+  justify-content: space-around;
+
+  background-color: var(--main-color4);
+  padding: 1em;
+}
+
+.panel {
+  color: var(--main-color4);
+  background-color: var(--main-color2);
+  text-align: center;
+
+  width: 12em;
+  padding: 1.5em 2em;
+  border: 1px solid var(--main-color1);
+  border-radius: 9999px;
+}
+
+.panel::before {
+  content: attr(data-label);
+  font-weight: bold;
+}
+

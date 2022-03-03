@@ -1,30 +1,30 @@
-import React from 'react'
+import React from "react"
 import styles from "./style.module.scss"
-import SideLink from './SideLink'
+import SideLink from "./SideLink"
 
 
 function Sidebar() {
   return (
     <nav className={styles.sidebar}>
       <ul>
-       <SideLink href={"/"}>
+        <SideLink href={"/users"}>
           Usuarios
         </SideLink>
 
-        <SideLink href={"../../back/ultimoUsuario.jsx"}>
+        <SideLink href={"/latest-user"}>
           Usuario mas reciente
         </SideLink>
 
-        <SideLink href={"/"}>
+        <SideLink href={"/products"}>
           Productos
         </SideLink>
 
-        <SideLink href={"/"}>
+        <SideLink href={"/latest-product"}>
           Producto mas reciente
         </SideLink>
 
-        <SideLink href={"/"}>
-          Categorias
+        <SideLink href={"/genres"}>
+          Géneros
         </SideLink>
 
    
