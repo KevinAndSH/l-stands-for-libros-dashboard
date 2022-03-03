@@ -27,9 +27,7 @@ function LatestProduct (){
 
   return (
     <section className={styles["latest-product"]}>
-      <div className="title">
-        <h1> Último producto creado </h1>
-      </div>
+      <h1>Último producto creado:</h1>
 
       <div className={styles["data"]}>
         <img src={productData.img_path} alt="foto de producto" />

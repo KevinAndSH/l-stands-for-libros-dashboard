@@ -23,7 +23,7 @@ function LatestUser (){
   
   return (
     <section className={styles["latest-user"]}>
-      <h1> Último usuario creado </h1>
+      <h1>Último usuario creado:</h1>
 
       <div className={styles["data"]}>
         <img src={userData.img_path} alt="foto de perfil" />
