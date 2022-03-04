@@ -3,16 +3,22 @@ import styles from "./index.module.scss"
 
 function Users() {
   const [users, setUsers] = useState([])
+  const [page, setPage] = useState(1)
+  const [totalPages, setTotalPages] = useState(1)
 
   useEffect(() => {
     let isMounted = true
-    fetch("https://lstandsforlibros.herokuapp.com/api/users/")
+    setUsers([])
+    fetch("https://lstandsforlibros.herokuapp.com/api/users?page=" + page)
       .then(res => res.json())
-      .then(data => isMounted && setUsers(data.users))
+      .then(data => {
+        isMounted && setUsers(data.users)
+        setTotalPages(Math.ceil(data.count / 10))
+      })
       .catch(err => console.error(err))
 
     return () => isMounted = false
-  }, [])
+  }, [page])
 
   return (
     <section className={styles.users}>
@@ -42,8 +48,23 @@ function Users() {
           })
         }
         </tbody>
-
       </table>
+
+      <div className={styles["page-link-wrapper"]}>
+        <button
+          onClick={page > 1 ? (() => setPage(page => page - 1)) : undefined}
+          className={page > 1 ? "" : styles.disabled}
+        >
+          Anterior
+        </button>
+
+        <button
+          onClick={page < totalPages ? (() => setPage(page => page + 1)) : undefined}
+          className={page < totalPages ? "" : styles.disabled}
+        >
+          Siguiente
+        </button>
+      </div>
     </section>
   )
 }

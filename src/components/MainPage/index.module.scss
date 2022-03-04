@@ -67,3 +67,35 @@
   }
 }
 
+.page-link-wrapper {
+  height: 3em;
+  width: 40em;
+  padding: .5em;
+  margin: .5em auto;
+  background-color: var(--main-color4);
+
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    background-color: transparent;
+    border: 0;
+    color: var(--main-color1);
+    font-weight: bold;
+    transition: 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    &.disabled {
+      opacity: 0.4;
+      cursor: auto;
+
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+}
